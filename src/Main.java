@@ -21,5 +21,12 @@ public class Main {
         long result = forkJoinPool.invoke(factorialTask);
 
         System.out.println("Факториал " + n + "! = " + result);
+
+        Integer[] inputArr = {1, 3 ,4 ,5 ,2, 2, 3, 4, 6, 5, 8, 5, 6, 7, 9, 10};
+        ArraySumTask arraySumTask = new ArraySumTask(inputArr);
+        Integer result2 = forkJoinPool.invoke(arraySumTask);
+
+        System.out.println("Сумма массива из " + inputArr.length + " элементов = " + result2);
+
     }
 }
